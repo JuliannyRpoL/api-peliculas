@@ -20,5 +20,5 @@ RUN flask db upgrade
 ENV PORT 5000
 EXPOSE ${PORT}
 
-CMD ["flask", "run", "--host", "0.0.0.0"]
+CMD ["flask", "run"]
 
