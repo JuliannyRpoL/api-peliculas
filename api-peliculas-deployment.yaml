@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+apps/v1 kind :   Deployment
+kind: Deployment
+metadata:
+  name: api-pelicula-v1
+  labels:
+    app: peliculas
+    version: "1.0"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: peliculas
+  template:
+    metadata:
+      labels:
+        app: peliculas
+        version: "1.0"
+    spec:
+      containers:
+      - name: peliculas
+        image: julirpo/api-peliculas:v1
+        ports:
+        - name: http-server
+          containerPort: 5000
