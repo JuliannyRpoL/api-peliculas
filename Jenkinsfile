@@ -1,7 +1,7 @@
 node {
     checkout scm
 
-    docker.withRegistry('https://registry.example.com', "dockerhub-credentials") {
+    docker.withRegistry('https://registry.hub.docker.com', "dockerhub-credentials") {
 
         def customImage = docker.build("api-peliculas:lts")
 
