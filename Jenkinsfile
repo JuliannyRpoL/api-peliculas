@@ -1,4 +1,4 @@
-python {
+node {
     checkout scm
 
     docker.withRegistry('https://registry.example.com', "dockerhub-credentials") {
