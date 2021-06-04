@@ -1,0 +1,10 @@
+---
+applications:
+ - name: app-ejemplo
+   random-route: true
+   memory: 128M
+  timeout: 180
+  env:
+    FLASK_APP : entrypoint:app
+    FLASK_ENV: development
+    FLASK_DEBUG : false 

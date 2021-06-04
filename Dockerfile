@@ -17,8 +17,7 @@ RUN flask db revision --rev-id 1c36c052e9e8
 RUN flask db migrate
 RUN flask db upgrade
 
-ENV PORT 5000
-EXPOSE ${PORT}
+EXPOSE 5000
 
-CMD ["flask", "run"]
+CMD ["python", "entrypoint.py"]
 
